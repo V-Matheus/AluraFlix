@@ -8,6 +8,7 @@ const BannerBg = styled.main`
   width: 100%;
   height: 750px;
   margin-top: -70px;
+  border-bottom: 5px solid #2271d1
 `;
 
 const BannerMainContainer = styled.div`

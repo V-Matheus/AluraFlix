@@ -1,23 +1,21 @@
-// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import { Header } from "./components/Header";
-import { BannerMain } from "./components/BannerMain";
-import { Cards } from "./components/Cards";
+import { Footer } from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
 
 export function AppRouter() {
-
-  // const router = createBrowserRouter([
-  //   {
-  //     path: '/',
-  //     element: <App />,
-  //   },
-  // ]);
  
   return (
     <>
+     
+     <BrowserRouter>
      <Header />
-     <BannerMain />
-     <Cards />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="*" element={<PaginaErro />} /> */}
+        </Routes>
+        <Footer />
+    </BrowserRouter>
     </>
   );
 }

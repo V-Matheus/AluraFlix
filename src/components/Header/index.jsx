@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import logo from '../../assets/logo.png'
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const HeaderContainer = styled.div`
   top: 0;
   right: 0;
   left: 0;
+  box-shadow: 0 5px 10px #2271d1;
 `;
 
 const ButtonsContainer = styled.nav`
@@ -43,7 +45,7 @@ const ButtonsContainer = styled.nav`
 export const Header = () => {
   return (
     <HeaderContainer>
-      <img src="/logo.svg" alt="Logo Alura Flix" />
+      <img src={logo} alt="Logo AluraFlix" />
       <ButtonsContainer>
         <button className="active">HOME</button>
         <button>NOVO VÍDEO</button>
