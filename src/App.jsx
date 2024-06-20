@@ -2,6 +2,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { NovoVideo } from "./pages/NovoVideo";
 
 export function AppRouter() {
  
@@ -12,7 +13,7 @@ export function AppRouter() {
      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="*" element={<PaginaErro />} /> */}
+          <Route path="/novovideo" element={<NovoVideo />} />
         </Routes>
         <Footer />
     </BrowserRouter>

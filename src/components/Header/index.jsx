@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
   box-shadow: 0 5px 10px #2271d1;
 `;
 
-const ButtonsContainer = styled.nav`
+export const ButtonsContainer = styled.nav`
   display: flex;
   gap: 2rem;
   width: Fixed (1, 443px) px;
