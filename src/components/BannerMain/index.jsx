@@ -51,8 +51,6 @@ const BannerInfo = styled.div`
       text-align: left;
     }
   }
-
- 
 `;
 
 export const BannerMain = () => {
@@ -60,7 +58,7 @@ export const BannerMain = () => {
     <BannerBg>
       <BannerMainContainer>
         <BannerInfo>
-          <Title color='#6BD1FF'>FRONT END</Title>
+          <Title color="#6BD1FF">FRONT END</Title>
           <div>
             <h2>SEO com React</h2>
             <p>

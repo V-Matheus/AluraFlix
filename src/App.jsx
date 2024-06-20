@@ -2,6 +2,7 @@
 
 import { Header } from "./components/Header";
 import { BannerMain } from "./components/BannerMain";
+import { Cards } from "./components/Cards";
 
 export function AppRouter() {
 
@@ -16,6 +17,7 @@ export function AppRouter() {
     <>
      <Header />
      <BannerMain />
+     <Cards />
     </>
   );
 }
