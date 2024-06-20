@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -23,7 +24,10 @@ export const ButtonsContainer = styled.nav`
   left: 0.5px;
   border: 0px 0px 4px 0px;
 
-  button {
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: Source Sans Pro;
     font-size: 20px;
     font-weight: 900;
@@ -43,12 +47,27 @@ export const ButtonsContainer = styled.nav`
 `;
 
 export const Header = () => {
+  const location = useLocation();
   return (
     <HeaderContainer>
-      <img src={logo} alt="Logo AluraFlix" />
+      <Link to='/'>
+        <img src={logo} alt="Logo AluraFlix" />
+      </Link>
       <ButtonsContainer>
-        <button className="active">HOME</button>
-        <button>NOVO VÍDEO</button>
+        <Link
+          to="/"
+          className={`button ${location.pathname === '/' ? 'active' : ''}`}
+        >
+          HOME
+        </Link>
+        <Link
+          to="/novovideo"
+          className={`button ${
+            location.pathname === '/novovideo' ? 'active' : ''
+          }`}
+        >
+          NOVO VÍDEO
+        </Link>
       </ButtonsContainer>
     </HeaderContainer>
   );
