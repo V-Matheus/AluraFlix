@@ -6,6 +6,10 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   padding: 2rem;
   background-color: #262626;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
 `;
 
 const ButtonsContainer = styled.nav`
