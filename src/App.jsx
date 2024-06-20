@@ -1,10 +1,19 @@
-function App() {
+// import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import { Header } from "./components/Header";
+
+export function AppRouter() {
+
+  // const router = createBrowserRouter([
+  //   {
+  //     path: '/',
+  //     element: <App />,
+  //   },
+  // ]);
+ 
   return (
     <>
-      <h1>Alura Flix</h1>
+     <Header />
     </>
-  )
+  );
 }
-
-export default App
