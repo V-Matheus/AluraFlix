@@ -33,7 +33,7 @@ export const ButtonsContainer = styled.nav`
     font-weight: 900;
     line-height: 24px;
     color: #ffffff;
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 10px;
     width: 180.13px;
     height: 54px;
@@ -41,7 +41,7 @@ export const ButtonsContainer = styled.nav`
 
   .active {
     color: #2271d1;
-    border: 2px solid #2271d1;
+    border: 3px solid #2271d1;
     box-shadow: inset 0 0 10px #2271d1;
   }
 `;
