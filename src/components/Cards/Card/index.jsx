@@ -1,4 +1,3 @@
-import player from '../../../assets/player.png';
 import editarIcon from '../../../assets/editarIcon.svg';
 import excluirIcon from '../../../assets/excluirIcon.svg';
 import styled from 'styled-components';
@@ -26,10 +25,10 @@ const CardStyled = styled.div`
   }
 `;
 
-export const Card = () => {
+export const Card = ({video}) => {
   return (
     <CardStyled>
-      <img src={player} alt="" />
+      <img src={video.imagem} alt="" />
       <div>
         <button>
           <img src={editarIcon} alt="Editar Icon" />
