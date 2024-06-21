@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import editarIcon from '../../../assets/editarIcon.svg';
 import excluirIcon from '../../../assets/excluirIcon.svg';
 import styled from 'styled-components';
@@ -14,6 +15,7 @@ const CardStyled = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 1rem 3.5rem;
+    gap: 5rem;
 
     button {
       color: white;
@@ -25,12 +27,14 @@ const CardStyled = styled.div`
   }
 `;
 
-export const Card = ({video}) => {
+export const Card = ({ video, handleDelete }) => {
   return (
     <CardStyled>
-      <img src={video.imagem} alt="" />
+      <a href={video.video}>
+        <img src={video.imagem} alt="" />
+      </a>
       <div>
-        <button>
+        <button onClick={() => handleDelete(video.id)}>
           <img src={editarIcon} alt="Editar Icon" />
           DELETAR
         </button>

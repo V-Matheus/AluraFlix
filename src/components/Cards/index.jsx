@@ -34,7 +34,20 @@ export const Cards = ({ categoriaName }) => {
       setVideosPorCategoria([...videoFiltrados]);
     };
     fetchApi();
-  }, [categoriaName]);
+  }, [categoriaName, videosPorCategoria]);
+
+  function handleDelete(id) {
+    videosPorCategoria.map((video) => {
+      if (video.id === id) {
+        fetch(`http://localhost:3000/videos/${video.id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+      }
+    });
+  }
 
   let color = '';
 
@@ -55,7 +68,7 @@ export const Cards = ({ categoriaName }) => {
       <Title color={color}>{categoriaName}</Title>
       <div>
         {videosPorCategoria.map((video) => {
-          return <Card key={video.id} video={video} />;
+          return <Card handleDelete={handleDelete} key={video.id} video={video} />;
         })}
       </div>
     </CardsContainer>
