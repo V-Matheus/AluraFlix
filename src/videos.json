@@ -1,0 +1,79 @@
+{
+  "categorias": [
+    {
+      "FRONT END": [
+        {
+          "id": 1,
+          "titulo": "Pare de Usar TypeScript - Interfaces (Types vs. Interfaces)",
+          "imagem": "https://i.ytimg.com/vi/q_a9BMDCTtE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfUR5kcubqHOP3XdxCuQOkD8RP6g",
+          "video": "https://www.youtube.com/watch?v=q_a9BMDCTtE",
+          "descricao": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae placeat eos, ipsa eligendi alias ut sunt explicabo praesentium laudantium omnis. Hic dolore sunt officia aliquid ullam esse ducimus, earum quidem."
+        },
+        {
+          "id": 2,
+          "titulo": "Como testar seu Front-end? com Mario Souto | #HipstersPontoTube",
+          "imagem": "https://i.ytimg.com/vi/CaTbfdsVydE/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAR3yiXpoQbLbDzj7OQTCDsf4D0PA",
+          "video": "https://www.youtube.com/watch?v=CaTbfdsVydE&t=334s",
+          "descricao": "Por onde começar a testar as habilidades em Front-end? Se você tem dúvidas na hora de testar softwares e colocar em prática técnicas modernas, esse vídeo vai te ajudar."
+        },
+        {
+          "id": 3,
+          "titulo": "CAMINHOS PARA SER UM DEV FRONT-END EM 2023 (GUIA COMPLETO E ATUALIZADO)",
+          "imagem": "https://i.ytimg.com/vi/30nlBGjPRYM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9XvF7Q31IezvPGr8JTiTif8frbQ",
+          "video": "https://www.youtube.com/watch?v=30nlBGjPRYM&t=1235s",
+          "descricao": "Se tornar um Dev Front-End em 2023 nunca foi tão... DIVERTIDO! Não é novidade que a área de Front-End vem crescendo e ficando cada vez mais complexa. Questão é saber o que e quando estudar cada assunto. Nesse guia em vídeo, explicamos quais são as tecnologias e as tendências para quem vai começar no Front-End em 2023."
+        }
+      ]
+    },
+    {
+      "BACK END": [
+        {
+          "id": 4,
+          "titulo": "Seja um Programador Back-End de Sucesso (dicas que gostaríamos ter recebido) // Vlog #98",
+          "imagem": "https://i.ytimg.com/vi/TJ90DZjYdWI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAAmLyVphEWheVLaj3McyhjzGKS1Q",
+          "video": "https://www.youtube.com/watch?v=30nlBGjPRYM&t=1235s",
+          "descricao": "Se tornar um Dev Front-End em 2023 nunca foi tão... DIVERTIDO! Não é novidade que a área de Front-End vem crescendo e ficando cada vez mais complexa. Questão é saber o que e quando estudar cada assunto. Nesse guia em vídeo, explicamos quais são as tecnologias e as tendências para quem vai começar no Front-End em 2023."
+        },
+        {
+          "id": 5,
+          "titulo": "Sendo VERSÁTIL no Back-End - Roadmap de Programação 2024",
+          "imagem": "https://i.ytimg.com/vi/sgqvzzWTInI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnKMdnSgJH33eKLI-HqOp8LB333A",
+          "video": "https://www.youtube.com/watch?v=sgqvzzWTInI",
+          "descricao": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae placeat eos, ipsa eligendi alias ut sunt explicabo praesentium laudantium omnis. Hic dolore sunt officia aliquid ullam esse ducimus, earum quidem."
+        },
+        {
+          "id": 6,
+          "titulo": "Como se tornar um desenvolvedor BACKEND? (Passo a passo / Roadmap)",
+          "imagem": "https://i.ytimg.com/vi/wXMlMsDvk2M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXyeGk6y4sLZ-l_t1ALYvLElrQ7g",
+          "video": "https://www.youtube.com/watch?v=wXMlMsDvk2M",
+          "descricao": "Recentemente fiz um video passo a passo sobre como se tornar um desenvolvedor Frontend e atendendo a pedidos, volto aqui com um passo a passo, um RoadMap de tudo que você precisa saber para se tornar um desenvolvedor Backend. Afinal é um profissional com alta demanda de mercado, esta entre os maiores salários e também dispõe de muitas possibilidades para se especializar. Como trabalhar com Backend te permite escolher e atuar com diversas tecnologias, talvez muitas pessoas se percam justamente nesse ponto. Então a ideia do video é dar uma clareada nesse caminho para que você consiga trilha-lo. Bora lá?"
+        }
+      ]
+    },
+    {
+      "MOBILE": [
+        {
+          "id": 7,
+          "titulo": "Como Se Tornar Um Desenvolvedor MOBILE em 2024? (ROADMAP de tecnologias ATUALIZADO)",
+          "imagem": "https://i.ytimg.com/vi/COY5vTa778g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDlaxZTpvS3MoHcjeU2k6lXa7H-sg",
+          "video": "https://www.youtube.com/watch?v=COY5vTa778g",
+          "descricao": "Um desenvolvedor mobile é um profissional que cria aplicativos para smartphones e tablets e smartwatchs usando linguagens como Kotlin, Java, Swift, Dart, C# e Javascript. Uma área em constante crescimento que vem passando por muitas transformações nos últimos anos."
+        },
+        {
+          "id": 8,
+          "titulo": "o que eu faço HOJE como Desenvolvedor Mobile",
+          "imagem": "https://i.ytimg.com/vi/xU2r-dSdN1o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAt1sKa0LGfDDXY0VLK9Qx9bdU9Vg",
+          "video": "https://www.youtube.com/watch?v=xU2r-dSdN1o",
+          "descricao": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae placeat eos, ipsa eligendi alias ut sunt explicabo praesentium laudantium omnis. Hic dolore sunt officia aliquid ullam esse ducimus, earum quidem."
+        },
+        {
+          "id": 9,
+          "titulo": "2024 chegou, Flutter morreu??? 😱 Especulações para o desenvolvimento de Apps mobile agora em 2024",
+          "imagem": "https://i.ytimg.com/vi/raNdcBnzZnA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIK-LbwnOZHBl0WRS8Z9YHMO0BdQ",
+          "video": "https://www.youtube.com/watch?v=raNdcBnzZnA",
+          "descricao": "No ano passado, houveram discussões na comunidade sobre o Flutter perder relevância agora em 2024, tendo o vídeo do @LucasMontano (   • Flutter vai acabar em 2024?  ) como o principal gatilho para essa discussão. "
+        }
+      ]
+    }
+  ]
+}
