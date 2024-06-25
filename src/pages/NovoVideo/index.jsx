@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ButtonsContainer } from '../../components/Header';
+import { useState } from 'react';
 
 const NovoVideoContainer = styled.main`
   background-color: #191919;
@@ -83,14 +84,26 @@ const NovoVideoTextArea = styled(NovoVideoLabel)`
   }
 `;
 
+function handleForm(e) {
+  e.preventDefault();
+}
+
 export const NovoVideo = () => {
+  const [titulo, setTitulo] = useState('');
+  const [categoria, setCategoria] = useState('');
+  const [imagem, setImagem] = useState('');
+  const [video, setVideo] = useState('');
+  const [descricao, setDescricao] = useState('');
+
+  console.log({ titulo, categoria, imagem, video, descricao });
+
   return (
     <NovoVideoContainer>
       <NovoVideoTitle>
         <h1>Novo vídeo</h1>
         <p>Complete o formulário para criar um novo card de vídeo.</p>
       </NovoVideoTitle>
-      <NovoVideoForm>
+      <NovoVideoForm onSubmit={(event) => handleForm(event)}>
         <h3>Criar Card</h3>
 
         <NovoVideoLabel>
@@ -101,13 +114,26 @@ export const NovoVideo = () => {
             id="titulo"
             placeholder="ingrese el título"
             required
+            value={titulo}
+            onChange={(e) => setTitulo(e.target.value)}
           />
         </NovoVideoLabel>
 
         <NovoVideoLabel>
           <label htmlFor="categoria">Categoria</label>
-          <select name="categoria" id="categoria" required>
-            <option value="">selecione uma categoría</option>
+          <select
+            name="categoria"
+            id="categoria"
+            required
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
+            <option value="" disabled>
+              selecione uma categoría
+            </option>
+            <option value="FRONTEND">FRONTEND</option>
+            <option value="BACKEND">BACKEND</option>
+            <option value="MOBILE">MOBILE</option>
           </select>
         </NovoVideoLabel>
 
@@ -119,6 +145,8 @@ export const NovoVideo = () => {
             id="imagem"
             placeholder="digite o link da imagem"
             required
+            value={imagem}
+            onChange={(e) => setImagem(e.target.value)}
           />
         </NovoVideoLabel>
 
@@ -130,12 +158,19 @@ export const NovoVideo = () => {
             id="video"
             placeholder="digite o link da video"
             required
+            value={video}
+            onChange={(e) => setVideo(e.target.value)}
           />
         </NovoVideoLabel>
 
         <NovoVideoTextArea>
           <label htmlFor="descricao">Descrição</label>
-          <textarea name="descricao" id="descricao"></textarea>
+          <textarea
+            name="descricao"
+            id="descricao"
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+          ></textarea>
         </NovoVideoTextArea>
 
         <ButtonsContainer>
@@ -146,7 +181,13 @@ export const NovoVideo = () => {
           >
             Guardar
           </button>
-          <button className="button" type="button">
+          <button className="button" type="button" onClick={() => {
+            setTitulo('')
+            setCategoria('')
+            setImagem('')
+            setVideo('')
+            setDescricao('')
+          }}>
             Limpar
           </button>
         </ButtonsContainer>
