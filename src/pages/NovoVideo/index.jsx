@@ -84,10 +84,6 @@ const NovoVideoTextArea = styled(NovoVideoLabel)`
   }
 `;
 
-function handleForm(e) {
-  e.preventDefault();
-}
-
 export const NovoVideo = () => {
   const [titulo, setTitulo] = useState('');
   const [categoria, setCategoria] = useState('');
@@ -95,7 +91,24 @@ export const NovoVideo = () => {
   const [video, setVideo] = useState('');
   const [descricao, setDescricao] = useState('');
 
-  console.log({ titulo, categoria, imagem, video, descricao });
+  const novoVideo = {
+    titulo,
+    categoria,
+    imagem,
+    video,
+    descricao,
+  };
+
+  function handleForm(e) {
+    e.preventDefault();
+    fetch('http://localhost:3000/videos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(novoVideo),
+    });
+  }
 
   return (
     <NovoVideoContainer>
@@ -103,7 +116,7 @@ export const NovoVideo = () => {
         <h1>Novo vídeo</h1>
         <p>Complete o formulário para criar um novo card de vídeo.</p>
       </NovoVideoTitle>
-      <NovoVideoForm onSubmit={(event) => handleForm(event)}>
+      <NovoVideoForm onSubmit={(e) => handleForm(e)}>
         <h3>Criar Card</h3>
 
         <NovoVideoLabel>
@@ -181,13 +194,17 @@ export const NovoVideo = () => {
           >
             Guardar
           </button>
-          <button className="button" type="button" onClick={() => {
-            setTitulo('')
-            setCategoria('')
-            setImagem('')
-            setVideo('')
-            setDescricao('')
-          }}>
+          <button
+            className="button"
+            type="button"
+            onClick={() => {
+              setTitulo('');
+              setCategoria('');
+              setImagem('');
+              setVideo('');
+              setDescricao('');
+            }}
+          >
             Limpar
           </button>
         </ButtonsContainer>
