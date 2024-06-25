@@ -20,7 +20,7 @@ const CardsContainer = styled.section`
   }
 `;
 
-export const Cards = ({ categoriaName }) => {
+export const Cards = ({ categoriaName, aoVideoSelecionado }) => {
   const [videosPorCategoria, setVideosPorCategoria] = useState([]);
 
   useEffect(() => {
@@ -68,7 +68,14 @@ export const Cards = ({ categoriaName }) => {
       <Title color={color}>{categoriaName}</Title>
       <div>
         {videosPorCategoria.map((video) => {
-          return <Card handleDelete={handleDelete} key={video.id} video={video} />;
+          return (
+            <Card
+              aoVideoSelecionado={aoVideoSelecionado}
+              handleDelete={handleDelete}
+              key={video.id}
+              video={video}
+            />
+          );
         })}
       </div>
     </CardsContainer>

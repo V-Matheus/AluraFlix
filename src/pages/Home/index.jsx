@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { BannerMain } from '../../components/BannerMain';
 import { Cards } from '../../components/Cards';
+import { ModalZoom } from '../../components/ModalZoom';
 
 export const Home = () => {
   const [categorias, setCategorias] = useState([]);
+  const [videoSelecionado, setVideoSelecionado] = useState(null)
+
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -22,12 +25,18 @@ export const Home = () => {
     fetchApi();
   }, []);
 
+  console.log(videoSelecionado);
+
   return (
     <>
       <BannerMain />
       {categorias.map((categoria) => {
-        return <Cards key={categoria} categoriaName={categoria} />;
+        return <Cards aoVideoSelecionado={(video) => setVideoSelecionado(video)} key={categoria} categoriaName={categoria} />;
       })}
+       <ModalZoom
+        video={videoSelecionado}
+        aoFechar={() => setVideoSelecionado(null)}
+      />
     </>
   );
 };

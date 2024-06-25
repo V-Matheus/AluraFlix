@@ -1,14 +1,6 @@
 {
   "videos": [
     {
-      "id": "1",
-      "titulo": "Pare de Usar TypeScript - Interfaces (Types vs. Interfaces)",
-      "categoria": "FRONTEND",
-      "imagem": "https://i.ytimg.com/vi/q_a9BMDCTtE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfUR5kcubqHOP3XdxCuQOkD8RP6g",
-      "video": "https://www.youtube.com/watch?v=q_a9BMDCTtE",
-      "descricao": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae placeat eos, ipsa eligendi alias ut sunt explicabo praesentium laudantium omnis. Hic dolore sunt officia aliquid ullam esse ducimus, earum quidem."
-    },
-    {
       "id": "2",
       "titulo": "Como testar seu Front-end? com Mario Souto | #HipstersPontoTube",
       "categoria": "FRONTEND",

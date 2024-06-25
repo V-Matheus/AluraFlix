@@ -5,7 +5,6 @@ import { Home } from './pages/Home';
 import { NovoVideo } from './pages/NovoVideo';
 
 export function AppRouter() {
-
   return (
     <>
       <BrowserRouter>

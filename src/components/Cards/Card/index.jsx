@@ -27,7 +27,7 @@ const CardStyled = styled.div`
   }
 `;
 
-export const Card = ({ video, handleDelete }) => {
+export const Card = ({ video, handleDelete, aoVideoSelecionado }) => {
   return (
     <CardStyled>
       <a href={video.video}>
@@ -38,7 +38,7 @@ export const Card = ({ video, handleDelete }) => {
           <img src={editarIcon} alt="Editar Icon" />
           DELETAR
         </button>
-        <button>
+        <button onClick={() => aoVideoSelecionado(video)}>
           <img src={excluirIcon} alt="Excluir Icon" />
           EDITAR
         </button>
