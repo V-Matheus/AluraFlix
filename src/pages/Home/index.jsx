@@ -25,7 +25,6 @@ export const Home = () => {
     fetchApi();
   }, []);
 
-  console.log(videoSelecionado);
 
   return (
     <>
