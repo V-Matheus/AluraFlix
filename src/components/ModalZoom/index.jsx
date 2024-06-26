@@ -93,13 +93,38 @@ const InputLabel = styled.div`
 `;
 
 export const ModalZoom = ({ video, aoFechar }) => {
+  const [titulo, setTitulo] = useState('');
+  const [categoria, setCategoria] = useState('');
+  const [imagem, setImagem] = useState('');
+  const [videoLink, setVideoLink] = useState('');
+  const [descricao, setDescricao] = useState('');
+
+  const novoVideo = {
+    titulo,
+    categoria,
+    imagem,
+    videoLink,
+    descricao,
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch(`http://localhost:3000/videos/${video.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(novoVideo),
+    });
+  }
+
   return (
     <>
       {video && (
         <>
           <Overlay />
           <DialogEstilizado open={!!video} onClose={aoFechar}>
-            <ModalForm>
+            <ModalForm onSubmit={handleSubmit}>
               <FormDiolog method="dialog">
                 <BotaoIcone formMethod="dialog">
                   <img src={XIcon} alt="Icone de fechar" />
@@ -116,12 +141,20 @@ export const ModalZoom = ({ video, aoFechar }) => {
                   id="titulo"
                   placeholder="ingrese el título"
                   required
+                  value={titulo}
+                  onChange={(e) => setTitulo(e.target.value)}
                 />
               </InputLabel>
 
               <InputLabel>
                 <label htmlFor="categoria">Categoria</label>
-                <select name="categoria" id="categoria" required>
+                <select
+                  name="categoria"
+                  id="categoria"
+                  required
+                  value={categoria}
+                  onChange={(e) => setCategoria(e.target.value)}
+                >
                   <option value="" disabled>
                     selecione uma categoría
                   </option>
@@ -139,6 +172,8 @@ export const ModalZoom = ({ video, aoFechar }) => {
                   id="imagem"
                   placeholder="digite o link da imagem"
                   required
+                  value={imagem}
+                  onChange={(e) => setImagem(e.target.value)}
                 />
               </InputLabel>
 
@@ -150,28 +185,35 @@ export const ModalZoom = ({ video, aoFechar }) => {
                   id="video"
                   placeholder="digite o link da video"
                   required
+                  value={videoLink}
+                  onChange={(e) => setVideoLink(e.target.value)}
                 />
               </InputLabel>
 
               <InputLabel>
                 <label htmlFor="descricao">Descrição</label>
-                <textarea name="descricao" id="descricao"></textarea>
+                <textarea
+                  name="descricao"
+                  id="descricao"
+                  value={descricao}
+                  onChange={(e) => setDescricao(e.target.value)}
+                ></textarea>
               </InputLabel>
 
               <ButtonsContainer>
-                <button
-                  to="/"
-                  className={`button ${
-                    location.pathname === '/' ? 'active' : ''
-                  }`}
-                >
+                <button className="button active" type="submit">
                   GUARDAR
                 </button>
                 <button
-                  to="/novovideo"
-                  className={`button ${
-                    location.pathname === '/novovideo' ? 'active' : ''
-                  }`}
+                  type="button"
+                  className="button"
+                  onClick={() => {
+                    setTitulo('');
+                    setCategoria('');
+                    setImagem('');
+                    setVideoLink('');
+                    setDescricao('');
+                  }}
                 >
                   LIMPAR
                 </button>
